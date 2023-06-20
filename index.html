@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    body {
+      background-image: url('https://e1.pxfuel.com/desktop-wallpaper/162/580/desktop-wallpaper-the-backgrounds-of-a-one-hundred-dollar-bill-style-blue-blue-money.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .glass-effect {
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 32px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="max-w-sm w-full bg-white rounded-lg shadow-md p-6 animate__animated animate__fadeIn glass-effect">
+    <h1 class="text-2xl font-bold mb-4 text-gray-800 animate__animated animate__fadeIn">Currency Converter</h1>
+    <div class="mb-4 animate__animated animate__fadeIn">
+      <label for="amount" class="block font-semibold text-gray-700">Amount in USD:</label>
+      <input type="number" id="amount" class="border border-gray-300 rounded-lg px-3 py-2 w-full" placeholder="Enter amount">
+    </div>
+    <div class="mb-4 animate__animated animate__fadeIn">
+      <label for="currency" class="block font-semibold text-gray-700">Convert to:</label>
+      <select id="currency" class="border border-gray-300 rounded-lg px-3 py-2 w-full">
+        <option value="PKR">Pakistani Rupees (PKR)</option>
+        <option value="EUR">Euro (EUR)</option>
+        <option value="INR">Indian Rupees (INR)</option>
+        <option value="GBP">British Pound (GBP)</option>
+        <option value="AED">United Arab Emirates Dirham (AED)</option>
+      </select>
+    </div>
+    <button id="convertBtn" class="bg-gradient-to-r from-purple-500 via-purple-600 to-indigo-500 hover:from-purple-600 hover:via-purple-700 hover:to-indigo-600 text-white font-semibold px-4 py-2 rounded-lg w-full animate__animated animate__fadeIn">
+      Convert
+    </button>
+    <div id="result" class="mt-4 text-xl font-semibold text-gray-800 animate__animated animate__fadeIn"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
